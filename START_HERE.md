@@ -13,7 +13,7 @@ Este projecto está **100% pronto** para fazer deploy no Coolify. Este ficheiro 
    ↓
 2. Executa: bash /tmp/push-to-github.sh
    ↓
-3. Vai a: http://localhost:3000 (Coolify Dashboard)
+3. Vai a: https://pico.louvps01.my.id:3000 (Coolify Dashboard)
    ↓
 4. Segue: COOLIFY_DEPLOYMENT.md
    ↓
@@ -102,7 +102,7 @@ bash /tmp/push-to-github.sh
 Tempo: ~2 minutos
 
 ### Passo 2: Setup Coolify
-1. Abre: http://localhost:3000
+1. Abre: https://pico.louvps01.my.id:3000
 2. Lê: COOLIFY_DEPLOYMENT.md
 3. Segue guia passo-a-passo
 Tempo: ~15 minutos
@@ -113,8 +113,8 @@ Tempo: ~10 minutos
 
 ### Passo 4: Teste
 ```bash
-curl http://localhost:18790/health  # Health check
-# Envia mensagem no Telegram         # Teste bot
+curl https://pico.louvps01.my.id:18790/health  # Health check
+# Envia mensagem no Telegram                     # Teste bot
 ```
 Tempo: ~5 minutos
 

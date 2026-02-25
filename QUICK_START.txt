@@ -61,7 +61,7 @@ PASSO 4: TESTE
 ────────────────────────────────────────────────────────────────────────────
 
 Health check:
-$ curl http://localhost:18790/health
+$ curl https://pico.louvps01.my.id:18790/health
 
 Resultado esperado:
   ✅ Status OK
@@ -93,7 +93,7 @@ GitHub Push:
 $ bash /tmp/push-to-github.sh
 
 Health Check:
-$ curl http://localhost:18790/health
+$ curl https://pico.louvps01.my.id:18790/health
 
 Ver logs Coolify:
 $ docker logs <container-name>
@@ -149,7 +149,7 @@ TROUBLESHOOTING RÁPIDO
 
 ❌ Telegram bot não responde?
 → Verifica TELEGRAM_BOT_TOKEN
-→ Verifica curl http://localhost:18790/health
+→ Verifica curl https://pico.louvps01.my.id:18790/health
 
 ❌ Dados sumiram?
 → Verifica se volume "workspace" foi criado

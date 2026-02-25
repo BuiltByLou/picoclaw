@@ -67,7 +67,12 @@ To https://github.com/BuiltByLou/picoclaw.git
 ### Passo 1: Ir ao Dashboard Coolify
 
 ```
-Abre browser → http://localhost:3000 (ou o IP do teu home server)
+Opções de acesso:
+├─ Local:    http://localhost:3000
+├─ Home Network: http://<ip-servidor>:3000
+└─ Externo:  https://pico.louvps01.my.id:3000 ✅
+
+Abre browser → https://pico.louvps01.my.id:3000
 Login no Coolify
 ```
 
@@ -121,9 +126,13 @@ Dockerfile:       ./Dockerfile
 
 ```
 Port Exposed:     18790
-Domain:           (deixa em branco se só acesso local)
+Domain:           pico.louvps01.my.id ✅
 Hostname:         (não preenchido)
 ```
+
+**Resultado esperado:**
+- Aplicação acessível em: https://pico.louvps01.my.id:18790
+- SSL/TLS gerido automaticamente pelo Traefik do Coolify
 
 **Clica: Continue**
 
@@ -186,11 +195,21 @@ Status esperado:
 
 ## FASE 4: Verificar o Deploy
 
-### Verificação 1: Health Check
+### Verificação 1: Health Check (Local)
 
 ```bash
 # No teu home server, testa:
 curl http://localhost:18790/health
+
+# Resultado esperado:
+# {"status": "ok"} ou similar
+```
+
+### Verificação 1B: Health Check (Externo)
+
+```bash
+# De qualquer máquina:
+curl https://pico.louvps01.my.id:18790/health
 
 # Resultado esperado:
 # {"status": "ok"} ou similar
