@@ -44,3 +44,6 @@ tasks/
 
 # Added by goreleaser init:
 dist/
+
+# Local deployment documentation (contains sensitive infrastructure info)
+deployment-docs/
